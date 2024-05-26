@@ -100,7 +100,7 @@ const Experience = () => {
                 >
                   April 15th, 2024 - Present
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[800px] sm:w-[800px] px-5">
+                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
                   <li className="font-roboto-mono text-[13px] tracking-[3px] md:text-[18px] sm:text-[16px]">
                     Collaborated closely with the design team to translate
                     wireframes into fully functional web interfaces.

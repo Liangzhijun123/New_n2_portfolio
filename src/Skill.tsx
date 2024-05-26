@@ -57,8 +57,6 @@ const SKill = () => {
   const renderContent = (index: number, item: any) => {
     if (clickedIndex === index) {
       return (
-
-        // ensure the render content when clicked the text doesn't overflow out
         <p
           className="text-white text-[18px] font-bold tracking-[1px] cursor-pointer overflow-auto p-4"
           onClick={() => handleClick(index)}
@@ -69,8 +67,6 @@ const SKill = () => {
       );
     }
     return (
-
-      // if the div is not clicked, then this is the original state
       <>
         <img src={item.arrow} alt="arrow" />
         <img src={item.icon} alt="icon" />
@@ -89,17 +85,11 @@ const SKill = () => {
     return stuff.map((item, index) => {
       const currentIndex = index + indexOffset;
       const isClicked = clickedIndex === currentIndex;
-
-      // if the div is clicked  it changed to bg and border color
       const divStyle = isClicked
         ? "bg-[#101839] border-[#0F3E68] px-5"
-
-        // when hovering over the unclicked div
         : "bg-[#060C26] border-[#0F3E68] hover:bg-[#061726] hover:border-[#99CEFD]";
 
       return (
-
-        // original div dimension
         <div
           key={currentIndex}
           onClick={() => handleClick(currentIndex)}
@@ -117,8 +107,8 @@ const SKill = () => {
         <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
           Skills
         </p>
-        <div className="overflow-x-auto">
-          <div className="flex flex-row justify-evenly items-center mt-[100px] md:gap-5 gap-2 min-w-[1600px] px-5">
+        <div className="overflow-x-auto px-10 w-full">
+          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5">
             {renderDivs(react_stuff, 0)}
             {renderDivs(tailwind_stuff, react_stuff.length)}
             {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
