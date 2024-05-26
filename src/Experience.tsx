@@ -7,7 +7,7 @@ const Experience = () => {
       <div id="experience" className="relative w-full">
         <div className="relative z-10">
           <div className="text-center">
-            <p className="font-raleway text-6xl font-bold text-white mt-40 md:text-5xl sm:text-4xl">
+            <p className="font-raleway text-[40px] font-bold text-white mt-40 md:text-5xl sm:text-4xl">
               Experiences
             </p>
           </div>
@@ -88,34 +88,34 @@ const Experience = () => {
               </figure>
 
               <div className="flex flex-col gap-8 justify-center text-left text-white relative md:ml-[100px] sm:ml-0">
-                <p className="font-raleway text-[30px] tracking-[3px] md:text-[25px] sm:text-[20px]">
+                <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap">
                   <span className="font-bold underline">
                     Frontend Developer Intern
                   </span>{" "}
                   - Shop Online New York
                 </p>
                 <p
-                  className="font-radley text-[30px] tracking-[3px] md:text-[25px] sm:text-[20px]"
+                  className="font-radley text-[15px] tracking-[3px] md:text-[25px] sm:text-[14px]"
                   style={{ fontStyle: "italic" }}
                 >
                   April 15th, 2024 - Present
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[800px] sm:w-full px-10">
-                  <li className="font-roboto-mono text-[20px] tracking-[3px] md:text-[18px] sm:text-[16px]">
+                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[800px] sm:w-[800px] px-5">
+                  <li className="font-roboto-mono text-[13px] tracking-[3px] md:text-[18px] sm:text-[16px]">
                     Collaborated closely with the design team to translate
                     wireframes into fully functional web interfaces.
                   </li>
-                  <li className="font-roboto-mono text-[20px] tracking-[3px] md:text-[18px] sm:text-[16px]">
+                  <li className="font-roboto-mono text-[13px] tracking-[3px] md:text-[18px] sm:text-[16px]">
                     Employed frontend frameworks and libraries such as React.js
                     and Tailwind CSS to enhance interactivity and the development
                     process.
                   </li>
-                  <li className="font-roboto-mono text-[20px] tracking-[3px] md:text-[18px] sm:text-[16px]">
+                  <li className="font-roboto-mono text-[13px] tracking-[3px] md:text-[18px] sm:text-[16px]">
                     Implemented data fetching and state management techniques to
                     create dynamic user experiences, reducing page load times and
                     enhancing overall performance.
                   </li>
-                  <li className="font-roboto-mono text-[20px] tracking-[3px] md:text-[18px] sm:text-[16px]">
+                  <li className="font-roboto-mono text-[13px] tracking-[3px] md:text-[18px] sm:text-[16px]">
                     Conducted thorough testing and debugging to ensure
                     cross-browser compatibility, responsiveness, and
                     accessibility, resulting in a seamless user experience across
