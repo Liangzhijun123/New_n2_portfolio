@@ -170,7 +170,7 @@ const Project = () => {
                     <a
                       href={item.link}
                       target="_blank"
-                      className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[15px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                      className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
                     >
                       View Project
                     </a>
