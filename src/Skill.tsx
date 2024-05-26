@@ -100,15 +100,23 @@ const SKill = () => {
       );
     });
   };
-
+ 
   return (
     <>
-      <div id="skills" className="md:mt-[130px] mt-[5px]">
+      <div id="skills" className="md:mt-[130px] mt-[100px]">
         <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
           Skills
         </p>
-        <div className="overflow-x-auto px-10 w-full">
+        <div className=" hidden md:block overflow-x-auto px-10 xl:w-full md:w-[1300px] " >
           <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5">
+            {renderDivs(react_stuff, 0)}
+            {renderDivs(tailwind_stuff, react_stuff.length)}
+            {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
+            {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
+          </div>
+        </div>
+        <div className="md:hidden overflow-x-auto ">
+        <div className="flex flex-row justify-evenly items-center md:min-w-[1400px] min-w-[1040px] px-5 gap-10 mt-[50px]" >
             {renderDivs(react_stuff, 0)}
             {renderDivs(tailwind_stuff, react_stuff.length)}
             {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}

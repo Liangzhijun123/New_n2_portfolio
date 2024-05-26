@@ -47,11 +47,11 @@ const Project = () => {
   return (
     <>
       <div id="project">
-        <div className="md:mt-[130px] mt-[5px]">
+        <div className="md:mt-[130px] mt-[100px] xl:mt-[130px]">
           <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center">
             Projects
           </p>
-          <div className="mt-[100px]">
+          <div className="xl:mt-[100px] md:mt-[150px] mt-10">
             <div className="hidden md:grid grid-cols-2 xl:gap-[171px] md:gap-[50px] justify-center xl:px-48  xl:min-w-[1900px] md:px-10  md:min-w-[1500px] ">
               {array1.map((item, index) => (
                 <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[10px]">
@@ -150,8 +150,8 @@ const Project = () => {
                 </div>
               ))}
             </div>
-            <div className="md:hidden overflow-x-auto">
-              <div className="flex flex-row justify-evenly items-center mt-[100px] md:gap-5  md:min-w-[1400px] min-w-[1040px] px-5 gap-10">
+            <div className="md:hidden overflow-x-auto mt-10">
+              <div className="flex flex-row justify-evenly items-center  md:gap-5  md:min-w-[1400px] min-w-[1040px] px-5 gap-10">
                 {array1.concat(array2, array3, array4).map((item, index) => (
                   <div key={index} className="bg-[#060C26] border-[#485789] border w-[312px] h-[396px] flex flex-col justify-center text-left px-5 gap-[6px]">
                     <img src={item.picture} alt={item.project} />
