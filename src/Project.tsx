@@ -59,7 +59,7 @@ const Project = () => {
                   <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
                   <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
                   <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-                  <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5">View Project</a>
+                  <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
                 </div>
               ))}
               {array2.map((item, index) => (
@@ -69,7 +69,7 @@ const Project = () => {
                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
                
-               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5">View Project</a>
+               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
               
              </div>
               ))}
@@ -79,7 +79,7 @@ const Project = () => {
                 <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
                 <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
                 <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-                <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5">View Project</a>
+                <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
               </div>
               ))}
               {array4.map((item, index) => (
@@ -88,7 +88,7 @@ const Project = () => {
                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5">View Project</a>
+               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
              </div>
               ))}
             </div>
