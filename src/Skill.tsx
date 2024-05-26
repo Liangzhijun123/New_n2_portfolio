@@ -113,15 +113,17 @@ const SKill = () => {
 
   return (
     <>
-      <div id="skills" className="">
-        <p className="font-raleway text-[64px] font-bold text-white flex flex-row justify-center items-center mt-[130px]">
+      <div id="skills" className="md:mt-[130px] mt-[5px]">
+        <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
           Skills
         </p>
-        <div className="flex flex-row justify-center items-center mt-[100px] gap-5">
-          {renderDivs(react_stuff, 0)}
-          {renderDivs(tailwind_stuff, react_stuff.length)}
-          {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
-          {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
+        <div className="overflow-x-auto">
+          <div className="flex flex-row justify-evenly items-center mt-[100px] md:gap-5 gap-2 min-w-[1600px] px-5">
+            {renderDivs(react_stuff, 0)}
+            {renderDivs(tailwind_stuff, react_stuff.length)}
+            {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
+            {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
+          </div>
         </div>
       </div>
     </>
