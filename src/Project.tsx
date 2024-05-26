@@ -47,50 +47,136 @@ const Project = () => {
   return (
     <>
       <div id="project">
-        <div className=" ">
-          <p className="font-raleway text-[64px] font-bold text-white flex flex-row justify-center items-center mt-[130px]">
+        <div className="md:mt-[130px] mt-[5px]">
+          <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center">
             Projects
           </p>
-          <div className="flex justify-center items-center mt-[100px]">
-            <div className="grid grid-cols-2 gap-[171px]">
-            {array1.map((item, index) => (
+          <div className="mt-[100px]">
+            <div className="hidden md:grid grid-cols-2 gap-[171px] justify-center xl:px-40  xl:min-w-[1600px] md:px-10  md:min-w-[1300px]">
+              {array1.map((item, index) => (
                 <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
                   <img src={item.picture} alt={item.project} />
-                  <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
-                  <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
-                  <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-                  <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Project: </span>
+                    <span className="font-arial text-[20px]">{item.project}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Year: </span>
+                    <span className="font-arial text-[20px]">{item.year}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Type: </span>
+                    <span className="font-arial text-[20px]">{item.type}</span>
+                  </p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                  >
+                    View Project
+                  </a>
                 </div>
               ))}
               {array2.map((item, index) => (
-               <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
-               <img src={item.picture} alt={item.project} />
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-               
-               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
-              
-             </div>
+                <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
+                  <img src={item.picture} alt={item.project} />
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Project: </span>
+                    <span className="font-arial text-[20px]">{item.project}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Year: </span>
+                    <span className="font-arial text-[20px]">{item.year}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Type: </span>
+                    <span className="font-arial text-[20px]">{item.type}</span>
+                  </p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                  >
+                    View Project
+                  </a>
+                </div>
               ))}
               {array3.map((item, index) => (
                 <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
-                <img src={item.picture} alt={item.project} />
-                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
-                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
-                <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-                <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
-              </div>
+                  <img src={item.picture} alt={item.project} />
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Project: </span>
+                    <span className="font-arial text-[20px]">{item.project}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Year: </span>
+                    <span className="font-arial text-[20px]">{item.year}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Type: </span>
+                    <span className="font-arial text-[20px]">{item.type}</span>
+                  </p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                  >
+                    View Project
+                  </a>
+                </div>
               ))}
               {array4.map((item, index) => (
-               <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
-               <img src={item.picture} alt={item.project} />
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Project:  </span> <span className="font-arial text-[20px]">{item.project}</span></p>
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Year:  </span> <span className="font-arial text-[20px]">{item.year}</span></p>
-               <p className="text-white font-radley text-[20px]"><span style={{ fontStyle: 'italic' }}>Type:  </span> <span className="font-arial text-[20px]">{item.type}</span></p>
-               <a href={item.link} target="_blank" className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center  ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]">View Project</a>
-             </div>
+                <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[6px]">
+                  <img src={item.picture} alt={item.project} />
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Project: </span>
+                    <span className="font-arial text-[20px]">{item.project}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Year: </span>
+                    <span className="font-arial text-[20px]">{item.year}</span>
+                  </p>
+                  <p className="text-white font-radley text-[20px]">
+                    <span style={{ fontStyle: 'italic' }}>Type: </span>
+                    <span className="font-arial text-[20px]">{item.type}</span>
+                  </p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[170px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                  >
+                    View Project
+                  </a>
+                </div>
               ))}
+            </div>
+            <div className="md:hidden overflow-x-auto">
+              <div className="flex flex-row justify-evenly items-center mt-[100px] md:gap-5  min-w-[1400px] ">
+                {array1.concat(array2, array3, array4).map((item, index) => (
+                  <div key={index} className="bg-[#060C26] border-[#485789] border w-[312px] h-[396px] flex flex-col justify-center text-left px-5 gap-[6px]">
+                    <img src={item.picture} alt={item.project} />
+                    <p className="text-white font-radley text-[20px]">
+                      <span style={{ fontStyle: 'italic' }}>Project: </span>
+                      <span className="font-arial text-[20px]">{item.project}</span>
+                    </p>
+                    <p className="text-white font-radley text-[20px]">
+                      <span style={{ fontStyle: 'italic' }}>Year: </span>
+                      <span className="font-arial text-[20px]">{item.year}</span>
+                    </p>
+                    <p className="text-white font-radley text-[20px]">
+                      <span style={{ fontStyle: 'italic' }}>Type: </span>
+                      <span className="font-arial text-[20px]">{item.type}</span>
+                    </p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      className="border border-[#0F3E68] rounded-xl w-[236px] h-[35px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center ml-[15px] mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
