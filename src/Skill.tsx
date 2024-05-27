@@ -107,8 +107,8 @@ const SKill = () => {
         <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
           Skills
         </p>
-        <div className="hidden md:block overflow-x-auto px-10 xl:w-full md:w-[1300px]">
-          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5">
+        <div className="hidden md:block overflow-x-auto px-10">
+          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5 w-[1800px]">
             {renderDivs(react_stuff, 0)}
             {renderDivs(tailwind_stuff, react_stuff.length)}
             {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
@@ -116,7 +116,7 @@ const SKill = () => {
           </div>
         </div>
         <div className="md:hidden overflow-x-auto px-2">
-          <div className="flex flex-row justify-evenly items-center min-w-[1800px]  mt-[50px]">
+          <div className="flex flex-row justify-evenly items-center min-w-[1800px] mt-[50px]">
             {renderDivs(react_stuff, 0)}
             {renderDivs(tailwind_stuff, react_stuff.length)}
             {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
