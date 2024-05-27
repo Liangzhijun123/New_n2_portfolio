@@ -151,7 +151,7 @@ const Project = () => {
               ))}
             </div>
             <div className="md:hidden overflow-x-auto mt-10">
-              <div className="flex flex-row justify-evenly items-center  md:gap-5  md:min-w-[1400px] min-w-[1040px] px-5 gap-10">
+              <div className="flex flex-row justify-evenly items-center  md:gap-5  md:min-w-[1400px] min-w-[940px] px-5 gap-10">
                 {array1.concat(array2, array3, array4).map((item, index) => (
                   <div key={index} className="bg-[#060C26] border-[#485789] border w-[312px] h-[396px] flex flex-col justify-center text-left px-5 gap-[6px]">
                     <img src={item.picture} alt={item.project} />
