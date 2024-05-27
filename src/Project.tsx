@@ -51,7 +51,7 @@ const Project = () => {
           <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center">
             Projects
           </p>
-          <div className="xl:mt-[100px] md:mt-[150px] mt-10">
+          <div className="xl:mt-[100px] md:mt-[150px] mt-10 overflow-x-auto">
             <div className="hidden md:grid grid-cols-2 xl:gap-[171px] md:gap-[50px] justify-center xl:px-48  xl:min-w-[1900px] md:px-10  md:min-w-[1500px] ">
               {array1.map((item, index) => (
                 <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[10px]">
@@ -186,4 +186,3 @@ const Project = () => {
 };
 
 export default Project;
-

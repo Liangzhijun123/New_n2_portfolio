@@ -108,7 +108,7 @@ const SKill = () => {
           Skills
         </p>
         <div className="hidden md:block overflow-x-auto px-10">
-          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5 w-[1800px]">
+          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5 min-w-[1500px]">
             {renderDivs(react_stuff, 0)}
             {renderDivs(tailwind_stuff, react_stuff.length)}
             {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
