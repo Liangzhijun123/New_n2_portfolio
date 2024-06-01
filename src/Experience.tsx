@@ -14,7 +14,7 @@ const Experience = () => {
 
           <div className="mt-20 w-full px-10">
             <div className="flex flex-col md:flex-row md:gap-10">
-              <figure className="hidden md:block md:mt-[-10px] md:ml-[250px] sm:ml-0 sm:mt-0 flex-shrink-0">
+              <figure className="hidden md:block md:mt-[-10px] xl:ml-[250px]  sm:ml-0 sm:mt-0 flex-shrink-0">
                 <svg
                   className="w-20 h-20 md:w-16 md:h-16 sm:w-14 sm:h-14 ml-[-45px]"
                   width="75px"
