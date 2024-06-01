@@ -50,8 +50,8 @@ const Project = () => {
           <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center">
             Projects
           </p>
-          <div className="xl:mt-[100px] md:mt-[150px] mt-10">
-            <div className="hidden md:grid grid-cols-2 xl:gap-[171px] md:gap-[50px] justify-center xl:px-48 xl:min-w-[1900px] md:px-10 md:min-w-[1500px]">
+          <div className="xl:mt-[100px] md:mt-[150px] mt-10 overflow-x-auto">
+            <div className="hidden md:grid grid-cols-2 xl:gap-[171px] md:gap-[50px] justify-center xl:px-48 xl:w-full md:px-10 md:min-w-[1500px]">
               {projects.map((item, index) => (
                 <div key={index} className="bg-[#060C26] border-[#485789] border w-[650px] h-[600px] flex flex-col justify-center text-left px-10 gap-[10px]">
                   <img src={item.picture} alt={item.project} />
@@ -78,9 +78,9 @@ const Project = () => {
               ))}
             </div>
             <div className="md:hidden overflow-x-auto mt-10">
-              <div className="grid grid-cols-2  justify-center gap-5 px-10 min-w-[800px] ">
+              <div className="grid grid-cols-2  justify-center gap-10 px-10 min-w-[1000px] ">
                 {projects.map((item, index) => (
-                  <div key={index} className="bg-[#060C26] border-[#485789] border w-[312px] h-[396px] flex flex-col justify-center text-left px-5 gap-[6px] min-w-[312px]">
+                  <div key={index} className="bg-[#060C26] border-[#485789] border w-[412px] h-[496px] flex flex-col justify-center text-left px-5 gap-[16px] min-w-[312px]">
                     <img src={item.picture} alt={item.project} className="w-full h-auto" />
                     <p className="text-white font-radley text-[20px]">
                       <span style={{ fontStyle: 'italic' }}>Project: </span>

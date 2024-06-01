@@ -103,28 +103,28 @@ const SKill = () => {
  
   return (
     <>
-      <div id="skills" className="md:mt-[130px] mt-[100px]">
-        <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
-          Skills
-        </p>
-        <div className="hidden md:block overflow-x-auto px-10">
-          <div className="flex flex-row justify-evenly items-center mt-[100px] gap-5 min-w-[1500px]">
-            {renderDivs(react_stuff, 0)}
-            {renderDivs(tailwind_stuff, react_stuff.length)}
-            {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
-            {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
-          </div>
-        </div>
-        <div className="md:hidden overflow-x-auto px-2">
-          <div className="flex flex-row justify-evenly items-center min-w-[1800px] mt-[50px]">
-            {renderDivs(react_stuff, 0)}
-            {renderDivs(tailwind_stuff, react_stuff.length)}
-            {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
-            {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
-          </div>
+    <div id="skills" className="md:mt-[130px] mt-[100px]">
+      <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center ">
+        Skills
+      </p>
+      <div className="hidden md:flex overflow-x-auto ">
+        <div className="flex flex-row justify-evenly items-center mt-[100px]  xl:w-full md:min-w-[1500px]">
+          {renderDivs(react_stuff, 0)}
+          {renderDivs(tailwind_stuff, react_stuff.length)}
+          {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
+          {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
         </div>
       </div>
-    </>
+      <div className="md:hidden overflow-x-auto px-2">
+        <div className="grid grid-cols-2  justify-center gap-10 px-10 min-w-[900px]">
+          {renderDivs(react_stuff, 0)}
+          {renderDivs(tailwind_stuff, react_stuff.length)}
+          {renderDivs(js_stuff, react_stuff.length + tailwind_stuff.length)}
+          {renderDivs(ts_stuff, react_stuff.length + tailwind_stuff.length + js_stuff.length)}
+        </div>
+      </div>
+    </div>
+  </>
   );
 };
 

@@ -1,0 +1,47 @@
+# Use an official Node.js runtime as a parent image
+FROM node:14
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Define the command to run the app
+CMD ["node", "app.js"]
+
+==============================================================
+
+Create a .dockerignore File: 
+
+This file is similar to .gitignore and specifies which files and directories should be ignored by Docker when building the image.
+
+node_modules
+npm-debug.log
+
+===============================================================
+
+Build and Run the Docker Image:
+docker build -t my-app .
+
+Run the Container:
+docker run -p 3000:3000 my-app
+
+===============================================================
+
+Use Docker Compose for Multi-Container Applications:
+
+Create a docker-compose.yml file:
+
+
+Start the Application:
+docker-compose up
