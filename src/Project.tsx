@@ -3,6 +3,7 @@ import picTwo from "./assets/pic2.svg";
 import picThree from "./assets/pic3.svg";
 import picFour from "./assets/pic4.svg";
 import picFive from "./assets/pic5.svg";
+import picSix from "./assets/pic6.svg";
 
 const projects = [
   {
@@ -39,7 +40,14 @@ const projects = [
     year: '2024',
     type: 'Individual Project',
     link: 'https://www.figma.com/proto/oRICFBb36yceOWdy5s49cB/Eco-Luxury-Hotel?node-id=0-3&t=CZIZUp0WgJwijrB3-1&scaling=min-zoom&page-id=0%3A1',
-  }
+  },
+  {
+    picture: picSix,
+    project: 'Design System Guide',
+    year: '2024',
+    type: 'Individual Project',
+    link: 'https://www.figma.com/design/ZkcODW9OMxXMzQBXmDFHwL/Design-System-Guide?node-id=0-1&t=CoMTm0isnt5PYVat-1',
+  },
 ]
 
 const Project = () => {
