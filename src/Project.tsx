@@ -4,6 +4,7 @@ import picThree from "./assets/pic3.svg";
 import picFour from "./assets/pic4.svg";
 import picFive from "./assets/pic5.svg";
 import picSix from "./assets/pic6.svg";
+import picSeven from "./assets/pic7.svg";
 
 const projects = [
   {
@@ -47,6 +48,13 @@ const projects = [
     year: '2024',
     type: 'Individual Project',
     link: 'https://www.figma.com/design/ZkcODW9OMxXMzQBXmDFHwL/Design-System-Guide?node-id=0-1&t=CoMTm0isnt5PYVat-1',
+  },
+  {
+    picture: picSeven,
+    project: 'Manga Landpage Design',
+    year: '2024',
+    type: 'Individual Project',
+    link: 'https://www.figma.com/proto/oJ7ZacNRrHJF5yApM75hGN/manga?node-id=33-93&t=FDBZLPpHpTB9K1hp-1&scaling=scale-down&page-id=0%3A1',
   },
 ]
 
