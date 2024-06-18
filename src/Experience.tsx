@@ -5,6 +5,7 @@ const Experience = () => {
   return (
     <>
       <div id="experience" className="relative w-full">
+        <img src={img} className="absolute top-0 left-0 w-full h-full object-cover z-0" alt="Background" />
         <div className="relative z-10">
           <div className="text-center">
             <p className="font-raleway text-[40px] font-bold text-white mt-40 md:text-5xl sm:text-4xl">
@@ -13,7 +14,7 @@ const Experience = () => {
           </div>
           <div className="mt-20 w-full px-10">
             <div className="flex flex-col md:flex-row md:gap-10">
-              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px]  sm:ml-0 sm:mt-0 ">
+              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px] md:ml-[150px] sm:ml-0 sm:mt-0 ">
                 <svg
                   className="w-20 h-20 md:w-16 md:h-16 sm:w-14 sm:h-14 ml-[-45px]"
                   width="75px"
@@ -73,7 +74,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white  md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[-190px] ">
+              <div className="flex flex-col gap-8 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[10px]  ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Developer Team Lead
@@ -113,7 +114,7 @@ const Experience = () => {
           </div>
           <div className=" w-full px-10 mt-[-55px]">
             <div className="flex flex-col md:flex-row md:gap-10">
-              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px]  sm:ml-0 sm:mt-0 flex-shrink-0">
+              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px] md:ml-[150px] sm:ml-0 sm:mt-0 flex-shrink-0">
                 <svg
                   className="w-20 h-20 md:w-16 md:h-16 sm:w-14 sm:h-14 ml-[-45px]"
                   width="75px"
@@ -186,7 +187,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white relative md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[-20px] ">
+              <div className="flex flex-col gap-8 justify-center text-left text-white relative md:ml-[60px] xl:ml-[100px] xl:mt-[-50px] md:mt-[1px] sm:ml-0 mt-[90px] ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Developer
