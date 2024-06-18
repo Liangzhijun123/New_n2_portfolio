@@ -94,7 +94,7 @@ const Project = () => {
               ))}
             </div>
             <div className="md:hidden overflow-x-auto mt-10">
-              <div className="grid grid-cols-2  justify-center gap-10 px-10 min-w-[1000px] ">
+              <div className="grid grid-cols-2  justify-center gap-10 px-6 min-w-[1000px] ">
                 {projects.map((item, index) => (
                   <div key={index} className="bg-[#060C26] border-[#485789] border w-[412px] h-[496px] flex flex-col justify-center text-left px-5 gap-[16px] min-w-[312px]">
                     <img src={item.picture} alt={item.project} className="w-full h-auto" />
