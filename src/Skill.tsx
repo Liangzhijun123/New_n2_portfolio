@@ -141,8 +141,8 @@ const SKill = () => {
             {renderDivs(skills)}
           </div>
         </div>
-        <div className="md:hidden overflow-x-auto ">
-          <div className="grid grid-cols-2 justify-center gap-10 px-5 min-w-[1000px]">
+        <div className="md:hidden overflow-x-auto mt-10">
+          <div className="grid grid-cols-2 justify-center gap-11 px-5 min-w-[1000px]">
             {renderDivs(skills)}
           </div>
         </div>

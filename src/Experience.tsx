@@ -13,7 +13,7 @@ const Experience = () => {
           </div>
           <div className="mt-20 w-full px-10">
             <div className="flex flex-col md:flex-row md:gap-10">
-              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px]  sm:ml-0 sm:mt-0 flex-shrink-0">
+              <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px]  sm:ml-0 sm:mt-0 ">
                 <svg
                   className="w-20 h-20 md:w-16 md:h-16 sm:w-14 sm:h-14 ml-[-45px]"
                   width="75px"
@@ -43,7 +43,7 @@ const Experience = () => {
                   ></circle>
                 </svg>
                 <svg
-                  height="450"
+                  height="650"
                   width="14"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mt-[-22px] "
@@ -52,7 +52,7 @@ const Experience = () => {
                     x1="0"
                     y1="0"
                     x2="0"
-                    y2="450"
+                    y2="650"
                     style={{ stroke: "white", strokeWidth: 14 }}
                   />
                 </svg>
@@ -68,28 +68,15 @@ const Experience = () => {
                     r="20"
                     className="stroke-primary stroke-1 fill-none"
                   ></circle>
-                  <circle
-                    cx="75"
-                    cy="50"
-                    r="20"
-                    className="stroke-5 fill-light"
-                    pathLength="1"
-                    stroke-dashoffset="0"
-                    stroke-dasharray="1 1"
-                  ></circle>
-                  <circle
-                    cx="75"
-                    cy="50"
-                    r="20"
-                    className="fill-white stroke-1"
-                  ></circle>
+                  
+                
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white relative md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[-20px] ">
+              <div className="flex flex-col gap-8 justify-center text-left text-white  md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[-190px] ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
-                    Tailwind CSS Team Lead
+                    Frontend Developer Team Lead
                   </span>{" "}
                   - Shop Online New York
                 </p>
@@ -124,7 +111,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
-          <div className="mt-20 w-full px-10">
+          <div className=" w-full px-10 mt-[-55px]">
             <div className="flex flex-col md:flex-row md:gap-10">
               <figure className="hidden md:block md:mt-[-10px] xl:ml-[450px]  sm:ml-0 sm:mt-0 flex-shrink-0">
                 <svg
