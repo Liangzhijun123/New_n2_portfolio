@@ -1,11 +1,11 @@
 import React from "react";
-import img from "./assets/footer.svg";
+
 
 const Experience = () => {
   return (
     <>
       <div id="experience" className="relative w-full">
-        <img src={img} className="absolute top-0 left-0 w-full h-full object-cover z-0" alt="Background" />
+        
         <div className="relative z-10">
           <div className="text-center">
             <p className="font-raleway text-[40px] font-bold text-white mt-40 md:text-5xl sm:text-4xl">

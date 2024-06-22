@@ -5,6 +5,7 @@ import twitter from "./assets/twitter.svg";
 import email from "./assets/email.svg";
 import img2 from "./assets/img1.svg";
 
+
 const NavBar = () => {
   return (
     <>
@@ -50,6 +51,7 @@ const NavBar = () => {
           <img src={email} alt="Email"></img>
         </a>
       </div>
+      
     </>
   );
 };
