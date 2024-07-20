@@ -5,6 +5,7 @@ import picFour from "./assets/pic4.svg";
 import picFive from "./assets/pic5.svg";
 import picSix from "./assets/pic6.svg";
 import picSeven from "./assets/pic7.svg";
+import picEight from "./assets/pic_8.svg";
 
 const projects = [
   {
@@ -55,6 +56,13 @@ const projects = [
     year: "2024",
     type: "Individual Project",
     link: "https://www.figma.com/proto/oJ7ZacNRrHJF5yApM75hGN/manga?node-id=33-93&t=FDBZLPpHpTB9K1hp-1&scaling=scale-down&page-id=0%3A1",
+  },
+  {
+    picture: picEight,
+    project: "FoodieOrder - Online Food Ordering",
+    year: "2024",
+    type: "Individual Project",
+    link: "https://www.figma.com/proto/CbXtLVYtZrnkUQHlwTkVKO/FoodieOrder---Online-Food-Ordering?node-id=59-58&t=3avEhp40FprRYU5c-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=59%3A58",
   },
 ];
 
