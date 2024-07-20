@@ -1,0 +1,86 @@
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Default slide display for desktop */
+  .slideshow-container.desktop {
+    display: flex;
+    flex-direction: row; /* Show slides in a row */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    gap: 25px; /* Space between slides */
+    
+  }
+  
+  .mySlides {
+    width: 400px; /* Fixed width for slides */
+    height: 456px; /* Fixed height for slides */
+    display: flex;
+    justify-content: center;
+    /* No padding applied here for desktop */
+  }
+  
+  .mySlides img {
+    max-width: 100%; /* Ensure images fit within the slide */
+    max-height: 100%; /* Ensure images fit within the slide */
+  }
+  
+  /* Slideshow styles for iPads */
+  @media (min-width: 1000px) and (max-width: 1500px) {
+    .slideshow-container.desktop {
+      overflow-x: auto; /* Allow horizontal scrolling */
+      gap: 10px; /* Space between slides */
+    }
+  
+    .mySlides {
+      width: 450px; /* Adjust width for iPad screens */
+      height: 500px; /* Adjust height for iPad screens */
+    }
+  }
+  
+  /* Slideshow styles for mobile */
+  @media (max-width: 767px) {
+    .slideshow-container.mobile {
+      display: block; /* Show one slide at a time */
+      position: relative;
+    }
+  
+    .mySlides {
+      display: none; /* Hide slides by default */
+      
+     
+      
+    }
+  
+    .mySlides.active {
+      display: flex; /* Show only the active slide */
+    }
+  
+    .prev,
+    .next {
+      display: block; /* Show navigation arrows */
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.287);
+      z-index: 100;
+      transform: translateY(-50%);
+    }
+  
+    .prev {
+      left: 0;
+      border-radius: 40px;
+    }
+  
+    .next {
+      right: 0;
+      border-radius: 40px;
+    }
+  }
+  
