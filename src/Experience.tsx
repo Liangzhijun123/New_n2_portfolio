@@ -10,7 +10,7 @@ const Experience = () => {
               Experiences
             </p>
           </div>
-          <div className="mt-20 w-full px-10">
+          <div className="md:mt-20 mt-5 w-full px-10">
             <div className="flex flex-col justify-center md:flex-row md:gap-10">
               <figure className="hidden md:block md:mt-[-10px]  md:ml-[150px] sm:ml-0 sm:mt-0 ">
                 <svg
@@ -70,7 +70,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[10px]  ">
+              <div className="flex flex-col md:gap-8 gap-1 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[5px]  ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Web Developer
@@ -83,7 +83,7 @@ const Experience = () => {
                 >
                   July 8, 2024 - Present
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
+                <ul className="list-disc list-inside md:mt-4 text-white flex flex-col md:gap-10 gap-[10px] xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
                   <li className="font-arial text-[13px] md:text-[18px] sm:text-[16px]">
                     Implemented code according to Figma designs for clients.
                   </li>
@@ -100,19 +100,12 @@ const Experience = () => {
                     Worked closely with clients to ensure designs met their
                     expectations.
                   </li>
-                  <li className="font-arial text-[13px]  md:text-[18px] sm:text-[16px]">
-                    Ensured good communication between design and development
-                    teams.
-                  </li>
-                  <li className="font-arial text-[13px]  md:text-[18px] sm:text-[16px]">
-                    Adapted designs to meet client feedback and improve user
-                    experience.
-                  </li>
+                  
                 </ul>
               </div>
             </div>
           </div>
-          <div className="mt-[-80px] w-full px-10">
+          <div className="md:mt-[-80px] mt-[10px] w-full px-10">
             <div className="flex flex-col justify-center md:flex-row md:gap-10">
               <figure className="hidden md:block md:mt-[-10px]  md:ml-[150px] sm:ml-0 sm:mt-0 ">
                 <svg
@@ -172,7 +165,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[10px]  ">
+              <div className="flex flex-col md:gap-8 gap-1 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[5px]  ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Web Developer
@@ -183,9 +176,9 @@ const Experience = () => {
                   className="font-radley text-[15px] tracking-[3px] md:text-[25px] sm:text-[14px]"
                   style={{ fontStyle: "italic" }}
                 >
-                  June 26, 2024 - Present
+                  June 26, 2024 - July 26, 2024
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
+                <ul className="list-disc list-inside md:mt-4 text-white flex flex-col md:gap-10 gap-[10px] xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
                   <li className="font-arial text-[13px] md:text-[18px] sm:text-[16px]">
                     Built and integrated a user sign-up function.
                   </li>
@@ -212,7 +205,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
-          <div className="mt-[-80px] w-full px-10">
+          <div className="md:mt-[-80px] mt-[10px] w-full px-10">
             <div className="flex flex-col justify-center md:flex-row md:gap-10">
               <figure className="hidden md:block md:mt-[-10px]  md:ml-[150px] sm:ml-0 sm:mt-0 ">
                 <svg
@@ -272,7 +265,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[10px]  ">
+              <div className="flex flex-col md:gap-8 gap-1 justify-center text-left text-white xl:mt-[-220px] md:mt-[-220px] md:ml-[100px] xl:ml-[100px] sm:ml-0 mt-[5px]  ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Developer Team Lead
@@ -285,7 +278,7 @@ const Experience = () => {
                 >
                   June 17, 2024 - Present
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
+                <ul className="list-disc list-inside md:mt-4 text-white flex flex-col md:gap-10 gap-[10px] xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
                   <li className="font-arial text-[13px] md:text-[18px] sm:text-[16px]">
                     Led a team in the development and implementation of frontend
                     solutions using React.js and Tailwind CSS, enhancing website
@@ -385,7 +378,7 @@ const Experience = () => {
                 </svg>
               </figure>
 
-              <div className="flex flex-col gap-8 justify-center text-left text-white relative md:ml-[60px] xl:ml-[100px] xl:mt-[-50px] md:mt-[1px] sm:ml-0 mt-[90px] ">
+              <div className="flex flex-col md:gap-8 gap-[10px] justify-center text-left text-white relative md:ml-[60px] xl:ml-[100px] xl:mt-[-50px] md:mt-[1px] sm:ml-0 mt-[90px] ">
                 <p className="font-raleway text-[15px] tracking-[3px] md:text-[25px] sm:text-[16px] text-wrap ">
                   <span className="font-bold underline">
                     Frontend Developer
@@ -398,7 +391,7 @@ const Experience = () => {
                 >
                   April 15th, 2024 - Present
                 </p>
-                <ul className="list-disc list-inside mt-4 text-white flex flex-col gap-10 xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
+                <ul className="list-disc list-inside md:mt-4 text-white flex flex-col md:gap-10 gap-[10px] xl:w-[900px]  md:w-[700px] sm:w-[600px] px-5">
                   <li className="font-arial text-[13px] md:text-[18px] sm:text-[16px]">
                     Collaborated closely with the design team to translate
                     wireframes into fully functional web interfaces.

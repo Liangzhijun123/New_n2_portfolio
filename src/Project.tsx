@@ -6,6 +6,8 @@ import picFive from "./assets/pic5.svg";
 import picSix from "./assets/pic6.svg";
 import picSeven from "./assets/pic7.svg";
 import picEight from "./assets/pic_8.svg";
+import picNine from "./assets/lifework.svg";
+import pic10 from "./assets/mycourse.svg";
 
 const projects = [
   {
@@ -64,70 +66,87 @@ const projects = [
     type: "Individual Project",
     link: "https://www.figma.com/proto/CbXtLVYtZrnkUQHlwTkVKO/FoodieOrder---Online-Food-Ordering?node-id=59-58&t=3avEhp40FprRYU5c-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=59%3A58",
   },
+  {
+    picture: picNine,
+    project: "LifeWork - Job Agency",
+    year: "2024",
+    type: "Internship Individual Project",
+    link: "https://www.figma.com/proto/12VF8vOuWxQJnH4ZyD99P9/internship-project---lifework?node-id=0-1963&t=kWvuOvgwwFAg0c43-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+  },
+  {
+    picture: pic10,
+    project: "RIT MyCourse - College Course Portal",
+    year: "2024",
+    type: "College Course Individual Project",
+    link: "https://www.figma.com/proto/kI4xE4E7pbe97PYR8TxxJ2/My-courses-redesign?node-id=1-6&t=tGR7iYvFj3pPqHrD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+  },
 ];
 
 const Project = () => {
   return (
     <>
       <div id="project">
-        <div className="md:mt-[130px] mt-[100px] xl:mt-[130px]">
+        <div className="md:mt-[130px] mt-[50px] xl:mt-[230px]">
           <p className="font-raleway text-[40px] md:text-[64px] font-bold text-white flex flex-row justify-center items-center">
             Projects
           </p>
           <div className="xl:mt-[100px] md:mt-[150px] mt-10 overflow-x-auto">
-            <div className="hidden md:grid grid-cols-2 xl:gap-[171px] md:gap-[50px] justify-center xl:px-48 xl:w-full md:px-10 md:min-w-[1490px]">
-              {projects.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-[#060C26] border-[#485789] border flex flex-col justify-between text-left p-10 gap-[10px]"
-                  style={{ width: "650px", height: "600px" }}
-                >
-                  <div>
-                    <img
-                      src={item.picture}
-                      alt={item.project}
-                      className="w-full h-auto"
-                    />
-                    <p className="text-white font-radley text-[20px]">
-                      <span style={{ fontStyle: "italic" }}>Project: </span>
-                      <span className="font-arial text-[20px]">
-                        {item.project}
-                      </span>
-                    </p>
-                    <p className="text-white font-radley text-[20px]">
-                      <span style={{ fontStyle: "italic" }}>Year: </span>
-                      <span className="font-arial text-[20px]">
-                        {item.year}
-                      </span>
-                    </p>
-                    <p className="text-white font-radley text-[20px]">
-                      <span style={{ fontStyle: "italic" }}>Type: </span>
-                      <span className="font-arial text-[20px]">
-                        {item.type}
-                      </span>
-                    </p>
+            <div className="mt-5 flex flex-row justify-center items-center">
+              <div className="hidden md:flex flex-wrap justify-center items-center gap-[30px]">
+                {projects.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-between text-left p-10 gap-[10px]"
+                    style={{ width: "650px", height: "600px", margin: "15px" }}
+                  >
+                    <div>
+                      <img
+                        src={item.picture}
+                        alt={item.project}
+                        className="w-full h-auto"
+                      />
+                      <p className="text-white font-radley text-[20px]">
+                        <span style={{ fontStyle: "italic" }}>Project: </span>
+                        <span className="font-arial text-[20px]">
+                          {item.project}
+                        </span>
+                      </p>
+                      <p className="text-white font-radley text-[20px]">
+                        <span style={{ fontStyle: "italic" }}>Year: </span>
+                        <span className="font-arial text-[20px]">
+                          {item.year}
+                        </span>
+                      </p>
+                      <p className="text-white font-radley text-[20px]">
+                        <span style={{ fontStyle: "italic" }}>Type: </span>
+                        <span className="font-arial text-[20px]">
+                          {item.type}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex justify-center">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        className="border border-[#0F3E68] rounded-xl w-[236px] h-[50px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
+                      >
+                        View Project
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex justify-center">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      className="border border-[#0F3E68] rounded-xl w-[236px] h-[50px] text-white text-[20px] font-raleway font-bold tracking-[4px] flex items-center justify-center mt-5 hover:bg-[#061726] hover:border-[#99CEFD]"
-                    >
-                      View Project
-                    </a>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <div className="md:hidden overflow-x-auto mt-10">
+
+            <div className="md:hidden overflow-y-auto h-[550px] mt-10">
               <div className="flex flex-col items-center gap-10 px-6 w-full">
                 {projects.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left  px-[20px] "
+                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left px-[20px]"
                     style={{ width: "312px", height: "396px" }}
                   >
-                    <div className="">
+                    <div>
                       <img
                         src={item.picture}
                         alt={item.project}
@@ -156,7 +175,7 @@ const Project = () => {
                       <a
                         href={item.link}
                         target="_blank"
-                        className="border border-[#0F3E68] rounded-xl w-[236px] h-[50px] text-white text-[16px] font-raleway font-bold tracking-[4px] flex items-center justify-center  hover:bg-[#061726] hover:border-[#99CEFD]"
+                        className="border border-[#0F3E68] rounded-xl w-[236px] h-[50px] text-white text-[16px] font-raleway font-bold tracking-[4px] flex items-center justify-center hover:bg-[#061726] hover:border-[#99CEFD]"
                       >
                         View Project
                       </a>
