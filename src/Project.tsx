@@ -8,6 +8,8 @@ import picSeven from "./assets/pic7.svg";
 import picEight from "./assets/pic_8.svg";
 import picNine from "./assets/lifework.svg";
 import pic10 from "./assets/mycourse.svg";
+import pic11 from "./assets/pic11.svg";
+import pic12 from "./assets/pic12.svg";
 
 const projects = [
   {
@@ -80,6 +82,20 @@ const projects = [
     type: "College Course Individual Project",
     link: "https://www.figma.com/proto/kI4xE4E7pbe97PYR8TxxJ2/My-courses-redesign?node-id=1-6&t=tGR7iYvFj3pPqHrD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
+  {
+    picture: pic11,
+    project: "Casino",
+    year: "2024",
+    type: "Individual Project",
+    link: "https://www.figma.com/proto/q66IPombEfO2IjlLXQAWO2/casino?node-id=1-2&node-type=frame&t=UeAP7Nc1KSDSGz7S-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+  },
+  {
+    picture: pic12,
+    project: "Milestone Group Logistics",
+    year: "2024",
+    type: "Individual Project",
+    link: "https://www.figma.com/proto/3Kd05YVZDWfcsbxv8dBcS8/Milestone-Group-Logistics?node-id=1-2&node-type=frame&t=jTGPwK1YrP1gwrE3-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+  },
 ];
 
 const Project = () => {
@@ -144,7 +160,7 @@ const Project = () => {
                   <div
                     key={index}
                     className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left px-[20px]"
-                    style={{ width: "312px", height: "396px" }}
+                    style={{ width: "312px", height: "450px" }}
                   >
                     <div>
                       <img
