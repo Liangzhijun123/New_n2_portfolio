@@ -75,13 +75,7 @@ const projects = [
     type: "Internship Individual Project",
     link: "https://www.figma.com/proto/12VF8vOuWxQJnH4ZyD99P9/internship-project---lifework?node-id=0-1963&t=kWvuOvgwwFAg0c43-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
   },
-  {
-    picture: pic10,
-    project: "RIT MyCourse - College Course Portal",
-    year: "2024",
-    type: "College Course Individual Project",
-    link: "https://www.figma.com/proto/kI4xE4E7pbe97PYR8TxxJ2/My-courses-redesign?node-id=1-6&t=tGR7iYvFj3pPqHrD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
-  },
+ 
   {
     picture: pic11,
     project: "Casino",
