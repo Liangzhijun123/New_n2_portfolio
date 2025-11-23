@@ -88,7 +88,7 @@ const ProjectDetail: React.FC = () => {
               <div className="mt-6">
                 <h4 className="text-lg font-bold mb-2">Screenshots</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  {project.screenshots.slice(0, 9).map((s, i) => (
+                  {project.screenshots.slice(0, 12).map((s, i) => (
                     <button
                       key={i}
                       onClick={() => setSelectedScreenshot(s)}
@@ -103,8 +103,8 @@ const ProjectDetail: React.FC = () => {
                     </button>
                   ))}
                 </div>
-                {project.screenshots.length > 9 && (
-                  <p className="text-sm text-gray-400 mt-2">Showing first 9 of {project.screenshots.length} screenshots</p>
+                {project.screenshots.length > 12 && (
+                  <p className="text-sm text-gray-400 mt-2">Showing first 12 of {project.screenshots.length} screenshots</p>
                 )}
               </div>
             )}

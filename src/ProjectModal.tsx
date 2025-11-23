@@ -97,41 +97,19 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 				</div>
 
 				<div className="mt-6 grid md:grid-cols-2 gap-6">
-					{/* Left: main project image + screenshots */}
+					{/* Left: main project image */}
 					<div>
-						{/* Main image - larger on desktop */}
 						<button
 							onClick={() => { /* keep existing behavior if needed */ }}
 							className="w-full p-0 bg-transparent border-0 block"
 							aria-label={`Open ${project.project} hero image`}
 						>
-								<img
-									src={project.picture}
-									alt={project.project}
-									className="w-full max-h-[40vh] md:max-h-[60vh] lg:max-h-[70vh] object-cover rounded-md shadow cursor-zoom-in"
-								/>
+							<img
+								src={project.picture}
+								alt={project.project}
+								className="w-full max-h-[40vh] md:max-h-[60vh] lg:max-h-[70vh] object-cover rounded-md shadow cursor-zoom-in"
+							/>
 						</button>
-
-						{/* Screenshots grid: 3x3 on desktop, 1x1 on mobile */}
-						{project.screenshots && project.screenshots.length > 0 && (
-							<div className="mt-4">
-								<h4 className="text-lg font-bold mb-2">Screenshots</h4>
-								<div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-									{project.screenshots.slice(0, 9).map((s, i) => (
-										<a key={i} href={s} target="_blank" rel="noreferrer" className="block rounded overflow-hidden">
-											<img
-												src={s}
-												alt={`${project.project} screenshot ${i + 1}`}
-												className="w-full h-28 md:h-32 lg:h-36 object-cover rounded cursor-zoom-in"
-											/>
-										</a>
-									))}
-								</div>
-								{project.screenshots.length > 9 && (
-									<p className="text-sm text-gray-400 mt-2">Showing first 9 of {project.screenshots.length} screenshots</p>
-								)}
-							</div>
-						)}
 					</div>
 
 					<div className="space-y-4">
@@ -196,6 +174,32 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 						)}
 					</div>
 				</div>
+				
+				{/* Full-width screenshots row below the two-column area */}
+				{project.screenshots && project.screenshots.length > 0 && (
+					<div className="mt-6">
+						<h4 className="text-lg font-bold mb-2">Screenshots</h4>
+						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+							{project.screenshots.slice(0, 12).map((s, i) => (
+								<button
+									key={i}
+									onClick={() => { /* open in lightbox or new tab */ }}
+									className="p-0 bg-transparent border-0 rounded overflow-hidden"
+									aria-label={`Open screenshot ${i + 1} for ${project.project}`}
+								>
+									<img
+										src={s}
+										alt={`${project.project} screenshot ${i + 1}`}
+										className="w-full h-48 md:h-56 object-cover rounded cursor-zoom-in"
+									/>
+								</button>
+							))}
+						</div>
+						{project.screenshots.length > 12 && (
+							<p className="text-sm text-gray-400 mt-2">Showing first 12 of {project.screenshots.length} screenshots</p>
+						)}
+					</div>
+				)}
 			</div>
 		</div>
 	);

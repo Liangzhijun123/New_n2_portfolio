@@ -12,6 +12,17 @@ import pic12 from "../assets/pic12.svg";
 import AboutMe from "../assets/AboutMe.png";
 import CanIDo from "../assets/CanIDo.png";
 import contactme from "../assets/contactme.png";
+import smoothie1 from "../assets/smoothie1.png";
+import smoothie2 from "../assets/smoothie2.png";
+import smoothie3 from "../assets/smoothie3.png";
+import smoothie4 from "../assets/smoothie4.png";
+import smoothie5 from "../assets/smoothie5.png";
+import smoothie6 from "../assets/smoothie6.png";
+import smoothie7 from "../assets/smoothie7.png";
+import smoothie8 from "../assets/smoothie8.png";
+import smmothie9 from "../assets/smoothie9.png";
+import smoothie10 from "../assets/smoothie10.png";
+import soothie11 from "../assets/smoothie11.png";
 
 export type ProjectItem = {
   picture: string;
@@ -69,7 +80,7 @@ const projects: ProjectItem[] = [
     short: "Landing & menu concept for a smoothie brand with playful colors.",
     concept: "Brand-first approach with scannable product cards and playful accents.",
     tech: ["Figma", "Design System"],
-    screenshots: [picThree],
+    screenshots: [picThree, smoothie1, smoothie2, smoothie3, smoothie4, smoothie5, smoothie6, smoothie7, smoothie8, smmothie9, smoothie10, soothie11],
     role: "Product Designer",
     duration: "3 weeks",
     outcome: "Clickable prototype used for stakeholder feedback.",
