@@ -1,8 +1,123 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Experience = () => {
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll<HTMLLIElement>('#experience ul li'));
+    if (els.length === 0) return;
+
+    // find figures and map each li to its parent figure so we can animate nodes
+    const figures = Array.from(document.querySelectorAll<HTMLElement>('#experience figure'));
+    const liToFigure = new Map<HTMLLIElement, HTMLElement | null>();
+    figures.forEach((fig) => {
+      // the <ul> is usually within the same flex container as the figure
+      const ul = fig.parentElement?.querySelector('ul');
+      if (!ul) return;
+      const lis = Array.from(ul.querySelectorAll<HTMLLIElement>('li'));
+      lis.forEach((li) => liToFigure.set(li, fig));
+    });
+
+    // add base class
+    els.forEach((el) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = '';
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+          const index = els.indexOf(target as HTMLLIElement);
+          const delay = Math.max(0, index) * 80;
+          target.style.transitionDelay = `${delay}ms`;
+          target.classList.add('in-view');
+
+          // trigger associated figure animation (only once per figure)
+          const fig = liToFigure.get(target as HTMLLIElement);
+          if (fig && !fig.classList.contains('node-in')) {
+            // small timeout so the node animates slightly before the bullet (optional)
+            window.setTimeout(() => fig.classList.add('node-in'), Math.max(0, delay - 100));
+          }
+
+          obs.unobserve(target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
+      <style>{`
+        /* Reveal animation for experience list items */
+        #experience ul li.reveal {
+          opacity: 0;
+          transform: translateY(14px) scale(.995);
+          transition: opacity 420ms cubic-bezier(.16,.8,.25,1), transform 420ms cubic-bezier(.16,.8,.25,1);
+        }
+        #experience ul li.reveal.in-view {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+
+        /* Timeline node animation (scale + subtle glow) */
+        #experience figure {
+          transition: transform 420ms cubic-bezier(.16,.8,.25,1), filter 420ms ease;
+        }
+        /* target the inner filled circle to scale nicely */
+        #experience figure svg circle.fill-white {
+          transform-box: fill-box;
+          transform-origin: 50% 50%;
+          transition: transform 420ms cubic-bezier(.16,.8,.25,1), opacity 420ms ease;
+          transform: scale(.85);
+          opacity: 0.85;
+        }
+        #experience figure.node-in svg circle.fill-white {
+          transform: scale(1);
+          opacity: 1;
+          filter: drop-shadow(0 4px 10px rgba(9,122,255,0.15));
+        }
+        /* Stroke-draw for outer circle and vertical line */
+        #experience figure svg circle.stroke-primary,
+        #experience figure svg circle.stroke-5 {
+          stroke-dasharray: 126;
+          stroke-dashoffset: 126;
+          transition: stroke-dashoffset 700ms cubic-bezier(.16,.8,.25,1);
+          stroke-linecap: round;
+        }
+        #experience figure.node-in svg circle.stroke-primary,
+        #experience figure.node-in svg circle.stroke-5 {
+          stroke-dashoffset: 0;
+        }
+
+        #experience figure svg line {
+          stroke-dasharray: 1200;
+          stroke-dashoffset: 1200;
+          transition: stroke-dashoffset 700ms cubic-bezier(.16,.8,.25,1);
+          stroke-linecap: round;
+        }
+        /* when node becomes active, draw the connecting line */
+        #experience figure.node-in ~ svg line,
+        #experience figure.node-in svg ~ svg line,
+        #experience figure.node-in svg line {
+          stroke-dashoffset: 0;
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          #experience ul li.reveal,
+          #experience figure,
+          #experience figure svg circle,
+          #experience figure svg line {
+            transition: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+            stroke-dashoffset: 0 !important;
+          }
+        }
+      `}</style>
       <div id="experience" className="relative w-full">
         <div className="relative z-10">
           <div className="text-center">

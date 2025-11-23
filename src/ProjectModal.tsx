@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 type Project = {
 	picture: string;
@@ -22,6 +22,9 @@ type Props = {
 };
 
 const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
+	const [slideIndex, setSlideIndex] = useState(0);
+	const [lightboxOpen, setLightboxOpen] = useState(false);
+	const [lightboxIndex, setLightboxIndex] = useState(0);
 	const dialogRef = React.useRef<HTMLDivElement | null>(null);
 	const closeBtnRef = React.useRef<HTMLButtonElement | null>(null);
 	const previouslyFocused = React.useRef<Element | null>(null);
@@ -31,6 +34,21 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 		setTimeout(() => closeBtnRef.current?.focus(), 0);
 
 		const onKey = (e: KeyboardEvent) => {
+			// when lightbox is open, handle its keys first
+			if (lightboxOpen) {
+				if (e.key === "Escape") {
+					setLightboxOpen(false);
+					return;
+				}
+				if (e.key === "ArrowLeft") {
+					setLightboxIndex((i) => (i - 1 + (project.screenshots?.length ?? 0)) % (project.screenshots?.length ?? 1));
+					return;
+				}
+				if (e.key === "ArrowRight") {
+					setLightboxIndex((i) => (i + 1) % (project.screenshots?.length ?? 1));
+					return;
+				}
+			}
 			if (e.key === "Escape") onClose();
 			if (e.key === "Tab") {
 				const dialog = dialogRef.current;
@@ -60,7 +78,48 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 				(previouslyFocused.current as HTMLElement).focus();
 			}
 		};
-	}, [onClose]);
+	}, [onClose, lightboxOpen, project.screenshots]);
+
+	// reset slide index when project changes
+	useEffect(() => {
+		setSlideIndex(0);
+	}, [project]);
+
+	// keyboard navigation for mobile slideshow
+	useEffect(() => {
+		const onKey = (e: KeyboardEvent) => {
+			if (window.innerWidth >= 768) return; // only for mobile
+			if (!project.screenshots || project.screenshots.length === 0) return;
+			if (e.key === "ArrowLeft") {
+				setSlideIndex((i) => (i - 1 + project.screenshots!.length) % project.screenshots!.length);
+			}
+			if (e.key === "ArrowRight") {
+				setSlideIndex((i) => (i + 1) % project.screenshots!.length);
+			}
+		};
+		window.addEventListener("keydown", onKey);
+		return () => window.removeEventListener("keydown", onKey);
+	}, [project]);
+
+	// prevent background scroll when lightbox open
+	useEffect(() => {
+		if (lightboxOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+		return () => { document.body.style.overflow = ''; };
+	}, [lightboxOpen]);
+
+	const nextSlide = () => {
+		if (!project.screenshots || project.screenshots.length === 0) return;
+		setSlideIndex((i) => (i + 1) % project.screenshots!.length);
+	};
+
+	const prevSlide = () => {
+		if (!project.screenshots || project.screenshots.length === 0) return;
+		setSlideIndex((i) => (i - 1 + project.screenshots!.length) % project.screenshots!.length);
+	};
 
 	return (
 		<div
@@ -171,7 +230,53 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 									Open Original
 								</a>
 							</div>
-						)}
+							)}
+
+							{/* Lightbox overlay (rendered outside the screenshots block to avoid JSX nesting issues) */}
+							{lightboxOpen && project.screenshots && (
+								<div
+									className="fixed inset-0 z-60 flex items-center justify-center"
+									onClick={() => setLightboxOpen(false)}
+									role="dialog"
+									aria-modal="true"
+								>
+									<div className="absolute inset-0 bg-black/85" />
+									<div className="relative max-w-[90vw] max-h-[90vh] z-70" onClick={(e) => e.stopPropagation()}>
+										<button
+											aria-label="Close image"
+											onClick={() => setLightboxOpen(false)}
+											className="absolute right-2 top-2 z-80 text-white text-2xl p-2 rounded focus:outline-none"
+										>
+											✕
+										</button>
+										<img
+											src={project.screenshots[lightboxIndex]}
+											alt={`${project.project} screenshot ${lightboxIndex + 1}`}
+											className="max-w-full max-h-[80vh] object-contain rounded"
+											loading="lazy"
+										/>
+										{/* Prev / Next */}
+										{project.screenshots.length > 1 && (
+											<>
+												<button
+													onClick={() => setLightboxIndex((i) => (i - 1 + project.screenshots!.length) % project.screenshots!.length)}
+													aria-label="Previous image"
+													className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
+												>
+													‹
+												</button>
+												<button
+													onClick={() => setLightboxIndex((i) => (i + 1) % project.screenshots!.length)}
+													aria-label="Next image"
+													className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
+												>
+													›
+												</button>
+											</>
+										)}
+									</div>
+								</div>
+							)}
 					</div>
 				</div>
 				
@@ -179,11 +284,54 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 				{project.screenshots && project.screenshots.length > 0 && (
 					<div className="mt-6">
 						<h4 className="text-lg font-bold mb-2">Screenshots</h4>
-						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+						{/* Mobile slideshow */}
+						<div className="block md:hidden">
+							<div className="relative">
+								<div className="w-full h-56 bg-[#041021] rounded overflow-hidden flex items-center justify-center">
+									<img
+										src={project.screenshots[slideIndex]}
+										alt={`${project.project} screenshot ${slideIndex + 1}`}
+										className="w-full h-full object-cover"
+										loading="lazy"
+									/>
+								</div>
+
+								<button
+									onClick={prevSlide}
+									aria-label="Previous screenshot"
+									className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+								>
+									‹
+								</button>
+
+								<button
+									onClick={nextSlide}
+									aria-label="Next screenshot"
+									className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full"
+								>
+									›
+								</button>
+
+								<div className="flex justify-center gap-2 mt-3">
+									{project.screenshots.map((_, i) => (
+										<button
+											key={i}
+											onClick={() => setSlideIndex(i)}
+											aria-label={`Go to screenshot ${i + 1}`}
+											className={`w-2 h-2 rounded-full ${i === slideIndex ? 'bg-white' : 'bg-gray-500/60'}`}
+										/>
+									))}
+								</div>
+							</div>
+						</div>
+
+						{/* Desktop grid */}
+						<div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 							{project.screenshots.slice(0, 12).map((s, i) => (
 								<button
 									key={i}
-									onClick={() => { /* open in lightbox or new tab */ }}
+									onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}
 									className="p-0 bg-transparent border-0 rounded overflow-hidden"
 									aria-label={`Open screenshot ${i + 1} for ${project.project}`}
 								>
@@ -191,6 +339,7 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 										src={s}
 										alt={`${project.project} screenshot ${i + 1}`}
 										className="w-full h-48 md:h-56 object-cover rounded cursor-zoom-in"
+										loading="lazy"
 									/>
 								</button>
 							))}
@@ -199,6 +348,8 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 							<p className="text-sm text-gray-400 mt-2">Showing first 12 of {project.screenshots.length} screenshots</p>
 						)}
 					</div>
+
+                    
 				)}
 			</div>
 		</div>
