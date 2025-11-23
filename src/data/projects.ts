@@ -23,6 +23,50 @@ import smoothie8 from "../assets/smoothie8.png";
 import smmothie9 from "../assets/smoothie9.png";
 import smoothie10 from "../assets/smoothie10.png";
 import soothie11 from "../assets/smoothie11.png";
+import travel1 from "../assets/travel1.png";
+import travel2 from "../assets/travel2.png";
+import travel3 from "../assets/travel3.png";
+import travel4 from "../assets/travel4.png";
+import travel5 from "../assets/travel5.png";
+import travel6 from "../assets/travel6.png";
+import travel7 from "../assets/travel7.png";
+import travel8 from "../assets/travel8.png";
+import travel9 from "../assets/travel9.png";
+import travel10 from "../assets/travel10.png";
+import eco1 from "../assets/eco1.png";
+import eco2 from "../assets/eco2.png";
+import eco3 from "../assets/eco3.png";
+import anime1 from "../assets/anime1.png";
+import anime2 from "../assets/anime2.png";
+import anime3 from "../assets/anime3.png";
+import food1 from "../assets/food1.png";
+import food2 from "../assets/food2.png";
+import food3 from "../assets/food3.png";
+import food4 from "../assets/food4.png";
+import food5 from "../assets/food5.png";
+import food6 from "../assets/food6.png";
+import food7 from "../assets/food7.png";
+import food8 from "../assets/food8.png";
+import food9 from "../assets/food9.png";
+import food10 from "../assets/food10.png";
+import life1 from "../assets/life1.png";
+import life2 from "../assets/life2.png";
+import life4 from "../assets/life4.png";
+import life5 from "../assets/life5.png";
+import life6 from "../assets/life6.png";
+import life7 from "../assets/life7.png";
+import life8 from "../assets/life8.png";
+import life9 from "../assets/life9.png";
+import life10 from "../assets/life10.png";
+import casino1 from "../assets/casino1.png";
+import casino2 from "../assets/casino2.png";
+import mile1 from "../assets/mile1.png";
+import mile2 from "../assets/mile2.png";
+import mile3 from "../assets/mile3.png";
+import mile4 from "../assets/mile4.png";
+import mile5 from "../assets/mile5.png";
+
+
 
 export type ProjectItem = {
   picture: string;
@@ -95,7 +139,7 @@ const projects: ProjectItem[] = [
     short: "Operations dashboard concept for airport staff focusing on visibility.",
     concept: "Data-driven dashboard with progressive disclosure and alerts.",
     tech: ["Figma", "UX Research"],
-    screenshots: [picFour],
+    screenshots: [picFour, travel1, travel2, travel3, travel4, travel5, travel6, travel7, travel8, travel9, travel10],
     role: "UX Designer",
     duration: "1 month",
     outcome: "Concept validated with stakeholders via walkthroughs.",
@@ -110,7 +154,7 @@ const projects: ProjectItem[] = [
     short: "Brand & booking flow visuals balancing luxury with sustainability.",
     concept: "Earthy palette and sustainability badges to communicate impact.",
     tech: ["Figma", "Branding"],
-    screenshots: [picFive],
+    screenshots: [picFive, eco1, eco2, eco3],
     role: "Visual Designer",
     duration: "3 weeks",
     outcome: "Brand prototype and booking visuals.",
@@ -140,7 +184,7 @@ const projects: ProjectItem[] = [
     short: "High-contrast landing inspired by manga panel layouts.",
     concept: "Bold type and hero illustrations mimic manga panels.",
     tech: ["Figma", "Illustration"],
-    screenshots: [picSeven],
+    screenshots: [picSeven, anime1, anime2, anime3],
     role: "Illustration & UI",
     duration: "2 weeks",
     outcome: "Landing visuals and hero art.",
@@ -155,7 +199,7 @@ const projects: ProjectItem[] = [
     short: "Ordering flow & menu design with reduced friction for users.",
     concept: "Persistent order summary and clear dietary filters for quick ordering.",
     tech: ["Figma", "UX"],
-    screenshots: [picEight],
+    screenshots: [picEight, food1, food2, food3, food4, food5, food6, food7, food8, food9, food10],
     role: "Product Designer",
     duration: "3 weeks",
     outcome: "Improved menu scannability and ordering flow.",
@@ -170,7 +214,7 @@ const projects: ProjectItem[] = [
     short: "A recruiting platform focused on matching and onboarding.",
     concept: "Recommendations-first homepage and streamlined candidate profiles.",
     tech: ["Figma", "Research"],
-    screenshots: [picNine],
+    screenshots: [picNine, life1, life2, life4, life5, life6, life7, life8, life9, life10],
     role: "Intern - Product",
     duration: "Internship",
     outcome: "Match-first homepage and onboarding flow.",
@@ -185,7 +229,7 @@ const projects: ProjectItem[] = [
     short: "Playful landing and onboarding micro-interactions.",
     concept: "Bright UI with progressive onboarding and clear categories.",
     tech: ["Figma", "Animation"],
-    screenshots: [pic11],
+    screenshots: [pic11, casino1, casino2],
     role: "UI Designer",
     duration: "2 weeks",
     outcome: "Landing concept and onboarding microcopy.",
@@ -200,7 +244,7 @@ const projects: ProjectItem[] = [
     short: "Dashboard & tracking concept for logistics with alerting patterns.",
     concept: "Real-time visibility, simple alerts, and prioritized exceptions.",
     tech: ["Figma", "Data Viz"],
-    screenshots: [pic12],
+    screenshots: [pic12, mile1, mile2, mile3, mile4, mile5],
     role: "UX & Data Viz",
     duration: "1 month",
     outcome: "Prototype dashboard with alerting patterns.",
@@ -209,4 +253,4 @@ const projects: ProjectItem[] = [
 ];
 
 export default projects;
-// (Removed duplicate block) — single canonical export above
+
