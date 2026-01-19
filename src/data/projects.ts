@@ -82,6 +82,11 @@ export type ProjectItem = {
   duration?: string;
   outcome?: string;
   process?: string[];
+  problem?: string;
+  userQuotes?: string[];
+  solution?: string;
+  features?: { title: string; lowfi?: string }[];
+  summary?: string;
 };
 
 const projects: ProjectItem[] = [
@@ -99,6 +104,18 @@ const projects: ProjectItem[] = [
     duration: "4 months",
     outcome: "Improved checkout flow and conversion-focused layout.",
     process: ["Research", "Wireframes", "Hi-fi design", "Handoff"],
+    problem: "Users experienced friction during checkout and low trust signaling.",
+    userQuotes: [
+      "I abandon carts when checkout is confusing.",
+      "I want clear product images and quick checkout." 
+    ],
+    solution: "Redesigned checkout flow, emphasized imagery and clear CTAs to shorten time-to-purchase.",
+    features: [
+      { title: "Onboarding", lowfi: "Simple account creation + guest checkout" },
+      { title: "Note Jotting", lowfi: "Admin notes for orders and customer preferences" },
+      { title: "Search", lowfi: "Filtered product search with clear results" }
+    ],
+    summary: "A conversion-focused full-stack storefront with an improved checkout experience.",
   },
   {
     picture: picTwo,
@@ -114,6 +131,18 @@ const projects: ProjectItem[] = [
     duration: "2 weeks",
     outcome: "Prototype showcasing motion and type scale patterns.",
     process: ["Ideation", "Type experiments", "Prototype"],
+    problem: "Portfolio felt generic; needed stronger typographic personality and motion.",
+    userQuotes: [
+      "The site needs to feel unique and memorable.",
+      "Animations help me understand the structure faster."
+    ],
+    solution: "Explored layered typography and subtle motion to increase scannability and uniqueness.",
+    features: [
+      { title: "Onboarding", lowfi: "Intro animation to orient visitors" },
+      { title: "Note Jotting", lowfi: "Designer notes panel for CMS integration" },
+      { title: "Search", lowfi: "Filter projects by type and year" }
+    ],
+    summary: "A prototype emphasizing typographic systems and motion to improve portfolio scanning.",
   },
   {
     picture: picThree,
@@ -129,6 +158,18 @@ const projects: ProjectItem[] = [
     duration: "3 weeks",
     outcome: "Clickable prototype used for stakeholder feedback.",
     process: ["Brand exploration", "Component library", "Prototype"],
+    problem: "Brand needed a playful, scannable landing to showcase menu and flavors.",
+    userQuotes: [
+      "I want to know what flavors are available quickly.",
+      "The site should feel fun and easy to order from."
+    ],
+    solution: "Created brand-first product cards and a colorful, scannable landing that guides ordering.",
+    features: [
+      { title: "Onboarding", lowfi: "First-time user flavor tour" },
+      { title: "Note Jotting", lowfi: "Recipe notes for editors" },
+      { title: "Search", lowfi: "Ingredient search with dietary tags" }
+    ],
+    summary: "A playful landing and menu prototype used to gather stakeholder feedback.",
   },
   {
     picture: picFour,
@@ -144,6 +185,18 @@ const projects: ProjectItem[] = [
     duration: "1 month",
     outcome: "Concept validated with stakeholders via walkthroughs.",
     process: ["Interviews", "Flows", "Prototype"],
+    problem: "Operational staff lacked a unified view of airport tasks and alerts.",
+    userQuotes: [
+      "I need one place for critical alerts and task handoff.",
+      "Too many systems make it hard to see what's urgent."
+    ],
+    solution: "Designed a data-driven dashboard with progressive disclosure and prioritized alerts.",
+    features: [
+      { title: "Onboarding", lowfi: "Role-based quickstart for staff" },
+      { title: "Note Jotting", lowfi: "Shift notes and handover comments" },
+      { title: "Search", lowfi: "Search by flight, gate, or task" }
+    ],
+    summary: "Concept validated with stakeholders via walkthroughs to show improved visibility.",
   },
   {
     picture: picFive,
@@ -159,6 +212,18 @@ const projects: ProjectItem[] = [
     duration: "3 weeks",
     outcome: "Brand prototype and booking visuals.",
     process: ["Moodboards", "Visual system", "Booking flow"],
+    problem: "Guests couldn't easily understand sustainability impact while booking.",
+    userQuotes: [
+      "I want to know the hotel's sustainability credentials before booking.",
+      "Booking should feel premium but responsible."
+    ],
+    solution: "Introduced sustainability badges and clear booking visuals to communicate impact.",
+    features: [
+      { title: "Onboarding", lowfi: "Welcome messaging highlighting sustainability" },
+      { title: "Note Jotting", lowfi: "Concierge notes and guest preferences" },
+      { title: "Search", lowfi: "Filter rooms by sustainability features" }
+    ],
+    summary: "Brand and booking visuals that balance luxury with clear sustainability signals.",
   },
   {
     picture: picSix,
@@ -174,6 +239,18 @@ const projects: ProjectItem[] = [
     duration: "2 months",
     outcome: "Reusable tokens and documented components.",
     process: ["Token audit", "Component library", "Docs"],
+    problem: "Teams lacked a single source of truth for tokens and components.",
+    userQuotes: [
+      "We duplicate styles across projects.",
+      "A shared token system would speed handoffs."
+    ],
+    solution: "Defined tokens and examples to create a reusable, documented design system.",
+    features: [
+      { title: "Onboarding", lowfi: "Token usage quickstart for new designers" },
+      { title: "Note Jotting", lowfi: "Component migration notes" },
+      { title: "Search", lowfi: "Search tokens and components by name" }
+    ],
+    summary: "Reusable tokens and documented components to improve consistency across teams.",
   },
   {
     picture: picSeven,
@@ -189,6 +266,18 @@ const projects: ProjectItem[] = [
     duration: "2 weeks",
     outcome: "Landing visuals and hero art.",
     process: ["Illustration", "Layout", "Prototype"],
+    problem: "Landing lacked expressive visuals that matched the manga aesthetic.",
+    userQuotes: [
+      "I want bold visuals that feel like a panel layout.",
+      "Type and illustration should carry emotion."
+    ],
+    solution: "Used bold type and hero illustrations to mimic manga panels and create impact.",
+    features: [
+      { title: "Onboarding", lowfi: "Hero tour of visual storytelling" },
+      { title: "Note Jotting", lowfi: "Art direction notes for illustrators" },
+      { title: "Search", lowfi: "Filter illustrations by scene or character" }
+    ],
+    summary: "High-contrast landing inspired by manga, focused on bold visuals and hero art.",
   },
   {
     picture: picEight,
@@ -204,6 +293,18 @@ const projects: ProjectItem[] = [
     duration: "3 weeks",
     outcome: "Improved menu scannability and ordering flow.",
     process: ["User flows", "Prototype", "Testing"],
+    problem: "Ordering flows were slow and menus were hard to scan for dietary needs.",
+    userQuotes: [
+      "I can't find vegetarian options quickly.",
+      "The order summary getting lost while browsing is frustrating."
+    ],
+    solution: "Built a persistent order summary, dietary filters, and scannable menu cards.",
+    features: [
+      { title: "Onboarding", lowfi: "Quick tutorial for first-time ordering" },
+      { title: "Note Jotting", lowfi: "Kitchen notes for special requests" },
+      { title: "Search", lowfi: "Search dishes and filter by dietary tags" }
+    ],
+    summary: "Ordering-focused menu design to reduce friction and speed checkout.",
   },
   {
     picture: picNine,
@@ -219,6 +320,18 @@ const projects: ProjectItem[] = [
     duration: "Internship",
     outcome: "Match-first homepage and onboarding flow.",
     process: ["Research", "Wireframes", "Prototype"],
+    problem: "Candidates and employers needed a more guided matching and onboarding experience.",
+    userQuotes: [
+      "I want job recommendations that match my profile.",
+      "Onboarding should be fast so I can apply quickly."
+    ],
+    solution: "Created a match-first homepage and streamlined onboarding to increase conversions.",
+    features: [
+      { title: "Onboarding", lowfi: "Guided profile setup with tips" },
+      { title: "Note Jotting", lowfi: "Recruiter notes attached to candidate profiles" },
+      { title: "Search", lowfi: "Search jobs by skills and preferences" }
+    ],
+    summary: "A recruiting platform focused on matching and quick onboarding for candidates.",
   },
   {
     picture: pic11,
@@ -234,6 +347,18 @@ const projects: ProjectItem[] = [
     duration: "2 weeks",
     outcome: "Landing concept and onboarding microcopy.",
     process: ["Concept", "Micro-interactions", "Prototype"],
+    problem: "New users needed a playful, clear onboarding to feel comfortable with games.",
+    userQuotes: [
+      "I want to learn game rules quickly.",
+      "Onboarding microcopy should reduce anxiety about losing progress."
+    ],
+    solution: "Designed progressive onboarding, clear categories, and playful interactions to ease new users in.",
+    features: [
+      { title: "Onboarding", lowfi: "Progressive tips per first games" },
+      { title: "Note Jotting", lowfi: "Gameplay notes for designers" },
+      { title: "Search", lowfi: "Search games by category and popularity" }
+    ],
+    summary: "Playful landing with onboarding micro-interactions to improve first-time user experience.",
   },
   {
     picture: pic12,
@@ -249,6 +374,18 @@ const projects: ProjectItem[] = [
     duration: "1 month",
     outcome: "Prototype dashboard with alerting patterns.",
     process: ["Requirements", "Dashboards", "Prototype"],
+    problem: "Logistics teams lacked a clear alerting pattern and prioritized task view.",
+    userQuotes: [
+      "We need real-time visibility on exceptions.",
+      "Alerts should be prioritized so we know what to fix first."
+    ],
+    solution: "Designed dashboards with prioritized exceptions and simple alerts to speed response.",
+    features: [
+      { title: "Onboarding", lowfi: "Role-based dashboard onboarding" },
+      { title: "Note Jotting", lowfi: "Incident notes and resolution history" },
+      { title: "Search", lowfi: "Search shipments, milestones, and alerts" }
+    ],
+    summary: "Prototype dashboard focused on exception prioritization and real-time visibility.",
   },
 ];
 

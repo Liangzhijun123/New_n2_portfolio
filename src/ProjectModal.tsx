@@ -14,6 +14,11 @@ type Project = {
 	duration?: string;
 	outcome?: string;
 	process?: string[];
+	problem?: string;
+	userQuotes?: string[];
+	solution?: string;
+	features?: { title: string; lowfi?: string }[];
+	summary?: string;
 };
 
 type Props = {
@@ -25,6 +30,9 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 	const [slideIndex, setSlideIndex] = useState(0);
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 	const [lightboxIndex, setLightboxIndex] = useState(0);
+
+	// Use screenshots when available, otherwise fall back to the main picture
+	const images = (project.screenshots && project.screenshots.length > 0) ? project.screenshots : [project.picture];
 	const dialogRef = React.useRef<HTMLDivElement | null>(null);
 	const closeBtnRef = React.useRef<HTMLButtonElement | null>(null);
 	const previouslyFocused = React.useRef<Element | null>(null);
@@ -41,11 +49,11 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 					return;
 				}
 				if (e.key === "ArrowLeft") {
-					setLightboxIndex((i) => (i - 1 + (project.screenshots?.length ?? 0)) % (project.screenshots?.length ?? 1));
+					setLightboxIndex((i) => (i - 1 + images.length) % images.length);
 					return;
 				}
 				if (e.key === "ArrowRight") {
-					setLightboxIndex((i) => (i + 1) % (project.screenshots?.length ?? 1));
+					setLightboxIndex((i) => (i + 1) % images.length);
 					return;
 				}
 			}
@@ -158,17 +166,17 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 				<div className="mt-6 grid md:grid-cols-2 gap-6">
 					{/* Left: main project image */}
 					<div>
-						<button
-							onClick={() => { /* keep existing behavior if needed */ }}
-							className="w-full p-0 bg-transparent border-0 block"
-							aria-label={`Open ${project.project} hero image`}
-						>
-							<img
-								src={project.picture}
-								alt={project.project}
-								className="w-full max-h-[40vh] md:max-h-[60vh] lg:max-h-[70vh] object-cover rounded-md shadow cursor-zoom-in"
-							/>
-						</button>
+							<button
+								onClick={() => { setLightboxIndex(0); setLightboxOpen(true); }}
+								className="w-full p-0 bg-transparent border-0 block"
+								aria-label={`Open ${project.project} hero image`}
+							>
+								<img
+									src={project.picture}
+									alt={project.project}
+									className="w-full max-h-[50vh] md:max-h-[70vh] lg:max-h-[80vh] object-cover rounded-md shadow cursor-zoom-in"
+								/>
+							</button>
 					</div>
 
 					<div className="space-y-4">
@@ -204,6 +212,52 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 							<p className="text-gray-200 mt-2">{project.outcome ?? "—"}</p>
 						</section>
 
+						{project.problem && (
+							<section>
+								<h3 className="text-xl font-bold">Problem</h3>
+								<p className="text-gray-200 mt-2">{project.problem}</p>
+							</section>
+						)}
+
+						{project.userQuotes && project.userQuotes.length > 0 && (
+							<section>
+								<h3 className="text-xl font-bold">User Quotes</h3>
+								<div className="mt-2 space-y-2">
+									{project.userQuotes.map((q, i) => (
+										<blockquote key={i} className="text-gray-300 italic pl-3 border-l-2 border-[#0F3E68]">{`"${q}"`}</blockquote>
+									))}
+								</div>
+							</section>
+						)}
+
+						{project.solution && (
+							<section>
+								<h3 className="text-xl font-bold">Solution</h3>
+								<p className="text-gray-200 mt-2">{project.solution}</p>
+							</section>
+						)}
+
+						{project.features && project.features.length > 0 && (
+							<section>
+								<h3 className="text-xl font-bold">Feature Definition & Low-fidelity</h3>
+								<div className="mt-2 space-y-2">
+									{project.features.map((f, i) => (
+										<div key={i} className="bg-[#07182a] p-3 rounded">
+											<div className="font-bold">{f.title}</div>
+											<div className="text-sm text-gray-300 mt-1">{f.lowfi ?? "—"}</div>
+										</div>
+									))}
+								</div>
+							</section>
+						)}
+
+						{project.summary && (
+							<section>
+								<h3 className="text-xl font-bold">Summary</h3>
+								<p className="text-gray-200 mt-2">{project.summary}</p>
+							</section>
+						)}
+
 						<section>
 							<h3 className="text-xl font-bold">Process</h3>
 							<div className="text-gray-200 mt-2">
@@ -233,7 +287,7 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 							)}
 
 							{/* Lightbox overlay (rendered outside the screenshots block to avoid JSX nesting issues) */}
-							{lightboxOpen && project.screenshots && (
+							{lightboxOpen && images.length > 0 && (
 								<div
 									className="fixed inset-0 z-60 flex items-center justify-center"
 									onClick={() => setLightboxOpen(false)}
@@ -250,23 +304,23 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 											✕
 										</button>
 										<img
-											src={project.screenshots[lightboxIndex]}
+											src={images[lightboxIndex]}
 											alt={`${project.project} screenshot ${lightboxIndex + 1}`}
-											className="max-w-full max-h-[80vh] object-contain rounded"
+											className="max-w-full max-h-[90vh] object-contain rounded"
 											loading="lazy"
 										/>
 										{/* Prev / Next */}
-										{project.screenshots.length > 1 && (
+										{images.length > 1 && (
 											<>
 												<button
-													onClick={() => setLightboxIndex((i) => (i - 1 + project.screenshots!.length) % project.screenshots!.length)}
+													onClick={() => setLightboxIndex((i) => (i - 1 + images.length) % images.length)}
 													aria-label="Previous image"
 													className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
 												>
 													‹
 												</button>
 												<button
-													onClick={() => setLightboxIndex((i) => (i + 1) % project.screenshots!.length)}
+													onClick={() => setLightboxIndex((i) => (i + 1) % images.length)}
 													aria-label="Next image"
 													className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
 												>
@@ -288,7 +342,7 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 						{/* Mobile slideshow */}
 						<div className="block md:hidden">
 							<div className="relative">
-								<div className="w-full h-56 bg-[#041021] rounded overflow-hidden flex items-center justify-center">
+								<div className="w-full h-72 bg-[#041021] rounded overflow-hidden flex items-center justify-center cursor-zoom-in" onClick={() => { setLightboxIndex(slideIndex); setLightboxOpen(true); }}>
 									<img
 										src={project.screenshots[slideIndex]}
 										alt={`${project.project} screenshot ${slideIndex + 1}`}
@@ -338,7 +392,7 @@ const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 									<img
 										src={s}
 										alt={`${project.project} screenshot ${i + 1}`}
-										className="w-full h-48 md:h-56 object-cover rounded cursor-zoom-in"
+										className="w-full h-64 md:h-72 lg:h-[600px] object-cover rounded cursor-zoom-in"
 										loading="lazy"
 									/>
 								</button>
