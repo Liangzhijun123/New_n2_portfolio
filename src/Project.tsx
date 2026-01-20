@@ -18,9 +18,14 @@ const Project = () => {
                 {projects.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-between text-left p-10 gap-[10px]"
+                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-between text-left p-10 gap-[10px] relative"
                     style={{ width: "650px", height: "600px", margin: "15px" }}
                   >
+                    {item.ranking && (
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-[#99CEFD] to-[#0F3E68] rounded-full w-12 h-12 flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">#{item.ranking}</span>
+                      </div>
+                    )}
                     <div>
                       <img
                         src={item.picture}
@@ -64,9 +69,14 @@ const Project = () => {
                 {projects.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left px-[20px]"
+                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left px-[20px] relative"
                     style={{ width: "312px", height: "450px" }}
                   >
+                    {item.ranking && (
+                      <div className="absolute top-2 right-2 bg-gradient-to-r from-[#99CEFD] to-[#0F3E68] rounded-full w-10 h-10 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">#{item.ranking}</span>
+                      </div>
+                    )}
                     <div>
                       <img
                         src={item.picture}

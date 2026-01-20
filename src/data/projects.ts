@@ -65,6 +65,16 @@ import mile2 from "../assets/mile2.png";
 import mile3 from "../assets/mile3.png";
 import mile4 from "../assets/mile4.png";
 import mile5 from "../assets/mile5.png";
+import crochet1 from "../assets/crochet1.png";
+import crochet2 from "../assets/crochet2.png";
+import crochet3 from "../assets/crochet3.png";
+import crochet4 from "../assets/crochet4.png";
+import crochet5 from "../assets/crochet5.png";
+import crochet6 from "../assets/crochet6.png";
+import crochet7 from "../assets/crochet7.png";
+import crochet8 from "../assets/crochet8.png";
+import crochet9 from "../assets/crochet9.png";
+import crochet10 from "../assets/crochet10.png";
 
 
 
@@ -87,9 +97,42 @@ export type ProjectItem = {
   solution?: string;
   features?: { title: string; lowfi?: string }[];
   summary?: string;
+  ranking?: number;
 };
 
 const projects: ProjectItem[] = [
+  {
+    picture: crochet1,
+    project: "Crochet Cuteness",
+    year: "2025-2026",
+    type: "Personal Design Project",
+    link: "https://www.figma.com/design/7xJNdNuXfmmeVSLFXG7AFu/shop?t=dln73GrPbyB5q0nV-0",
+    short: "A design platform for the crochet community with patterns, tutorials, and creator engagement.",
+    concept: "Warm pink and white palette with playful loading animations and community engagement features.",
+    tech: ["Figma", "UX Research"],
+    screenshots: [crochet1, crochet2, crochet3, crochet4, crochet5, crochet6, crochet7, crochet8, crochet9, crochet10],
+    role: "Product Designer",
+    duration: "Ongoing",
+    outcome: "Platform concept with engagement and monetization strategy.",
+    process: ["Community Research", "Pain Point Analysis", "Solution Design", "Feature Planning"],
+    problem: "Crochet community members found patterns too expensive and lacked step-by-step creator walkthroughs.",
+    userQuotes: [
+      "Patterns are too expensive without proper guidance.",
+      "I want to connect directly with creators for pattern testing feedback."
+    ],
+    solution: "Created a platform where users purchase patterns, watch guided tutorials, and engage with creators for feedback.",
+    features: [
+      { title: "Pattern Marketplace", lowfi: "User and creator pattern listings with pricing" },
+      { title: "Video Tutorials", lowfi: "Step-by-step guided walkthroughs by pattern creators" },
+      { title: "Daily Rewards", lowfi: "Calendar-based coin claims and points system" },
+      { title: "Creator Messaging", lowfi: "Direct messaging between users and creators" },
+      { title: "Community Competitions", lowfi: "In-platform competitions between brands for engagement" },
+      { title: "Seller Program", lowfi: "Users can become creators and sell patterns" },
+      { title: "Admin Panel", lowfi: "Platform management tools (future)" }
+    ],
+    summary: "This is a personal design project I created for the crochet community, based on user needs and engagement strategies.\n\nIdea & Problem Solving: I noticed in crochet communities that patterns were seen as too expensive and often lacked step-by-step creator walkthroughs. My solution: a platform where users can purchase patterns, watch guided tutorials, and engage directly with creators for pattern testing questions.\n\nDesign Choices: I chose a warm pink and white palette to match the logo and create a welcoming brand identity. I included a loading animation before the main page for a more playful feel compared to a plain white screen.\n\nEngagement Features: Daily coin claims via a calendar, a points system tied to purchases, and in-platform competitions between brands to encourage community sharing and friendly rivalry.\n\nBusiness Strategy: Monetization through ads, a seller program where users can become creators, and eventually an admin panel to manage all platform activities (not yet designed).\n\nCommunity Building: Direct messaging between users and creators for feedback and pattern testing discussions.\n\nThis project reflects my process: identifying user pain points → designing solutions that blend usability with business goals → adding interactive elements to keep users engaged.",
+    ranking: 1,
+  },
   {
     picture: picOne,
     project: "E-commerce",
@@ -116,6 +159,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Filtered product search with clear results" }
     ],
     summary: "A conversion-focused full-stack storefront with an improved checkout experience.",
+    ranking: 12,
   },
   {
     picture: picTwo,
@@ -143,6 +187,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Filter projects by type and year" }
     ],
     summary: "A prototype emphasizing typographic systems and motion to improve portfolio scanning.",
+    ranking: 11,
   },
   {
     picture: picThree,
@@ -170,6 +215,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Ingredient search with dietary tags" }
     ],
     summary: "A playful landing and menu prototype used to gather stakeholder feedback.",
+    ranking: 6,
   },
   {
     picture: picFour,
@@ -197,6 +243,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search by flight, gate, or task" }
     ],
     summary: "Concept validated with stakeholders via walkthroughs to show improved visibility.",
+    ranking: 10,
   },
   {
     picture: picFive,
@@ -224,6 +271,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Filter rooms by sustainability features" }
     ],
     summary: "Brand and booking visuals that balance luxury with clear sustainability signals.",
+    ranking: 7,
   },
   {
     picture: picSix,
@@ -251,6 +299,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search tokens and components by name" }
     ],
     summary: "Reusable tokens and documented components to improve consistency across teams.",
+    ranking: 8,
   },
   {
     picture: picSeven,
@@ -278,6 +327,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Filter illustrations by scene or character" }
     ],
     summary: "High-contrast landing inspired by manga, focused on bold visuals and hero art.",
+    ranking: 4,
   },
   {
     picture: picEight,
@@ -305,6 +355,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search dishes and filter by dietary tags" }
     ],
     summary: "Ordering-focused menu design to reduce friction and speed checkout.",
+    ranking: 9,
   },
   {
     picture: picNine,
@@ -332,6 +383,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search jobs by skills and preferences" }
     ],
     summary: "A recruiting platform focused on matching and quick onboarding for candidates.",
+    ranking: 5,
   },
   {
     picture: pic11,
@@ -359,6 +411,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search games by category and popularity" }
     ],
     summary: "Playful landing with onboarding micro-interactions to improve first-time user experience.",
+    ranking: 3,
   },
   {
     picture: pic12,
@@ -386,8 +439,11 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search shipments, milestones, and alerts" }
     ],
     summary: "Prototype dashboard focused on exception prioritization and real-time visibility.",
+    ranking: 2,
   },
 ];
+
+projects.sort((a, b) => (a.ranking || 999) - (b.ranking || 999));
 
 export default projects;
 
