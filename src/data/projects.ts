@@ -106,7 +106,7 @@ const projects: ProjectItem[] = [
     project: "Crochet Cuteness",
     year: "2025-2026",
     type: "Personal Design Project",
-    link: "https://www.figma.com/design/7xJNdNuXfmmeVSLFXG7AFu/shop?t=dln73GrPbyB5q0nV-0",
+    link: "https://crochet-ecommerce-site.vercel.app/",
     short: "A design platform for the crochet community with patterns, tutorials, and creator engagement.",
     concept: "Warm pink and white palette with playful loading animations and community engagement features.",
     tech: ["Figma", "UX Research"],
