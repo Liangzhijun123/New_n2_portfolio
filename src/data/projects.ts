@@ -3,6 +3,13 @@ import picTwo from "../assets/pic2.svg";
 import picThree from "../assets/pic3.svg";
 import picFour from "../assets/pic4.svg";
 import picFive from "../assets/pic5.svg";
+import interviewbuddy1 from "../assets/interviewbuddy1.png";
+import interviewbuddy2 from "../assets/interviewbuddy2.png";
+import interviewbuddy3 from "../assets/interviewbuddy3.png";
+import interviewbuddy4 from "../assets/interviewbuddy4.png";
+import interviewbuddy5 from "../assets/interviewbuddy5.png";
+import interviewbuddy6 from "../assets/interviewbuddy6.png";
+import interviewbuddy9 from "../assets/interviewbuddy9.png";
 import picSix from "../assets/pic6.svg";
 import picSeven from "../assets/pic7.svg";
 import picEight from "../assets/pic_8.svg";
@@ -132,6 +139,35 @@ const projects: ProjectItem[] = [
     ],
     summary: "This is a personal design project I created for the crochet community, based on user needs and engagement strategies.\n\nIdea & Problem Solving: I noticed in crochet communities that patterns were seen as too expensive and often lacked step-by-step creator walkthroughs. My solution: a platform where users can purchase patterns, watch guided tutorials, and engage directly with creators for pattern testing questions.\n\nDesign Choices: I chose a warm pink and white palette to match the logo and create a welcoming brand identity. I included a loading animation before the main page for a more playful feel compared to a plain white screen.\n\nEngagement Features: Daily coin claims via a calendar, a points system tied to purchases, and in-platform competitions between brands to encourage community sharing and friendly rivalry.\n\nBusiness Strategy: Monetization through ads, a seller program where users can become creators, and eventually an admin panel to manage all platform activities (not yet designed).\n\nCommunity Building: Direct messaging between users and creators for feedback and pattern testing discussions.\n\nThis project reflects my process: identifying user pain points → designing solutions that blend usability with business goals → adding interactive elements to keep users engaged.",
     ranking: 1,
+  },
+  {
+    picture: interviewbuddy1,
+    project: "Interview Buddy",
+    year: "2024",
+    type: "Individual Project",
+    link: "https://devhackthon-72ur.vercel.app/",
+    short: "Practice Interviews Like It's the Real Thing: timed coding prompts, session ratings, and streak tracking.",
+    concept: "Structured mock interviews with timing pressure, accountability tracking, and performance analytics.",
+    tech: ["React", "TypeScript", "Vercel", "Firebase"],
+    screenshots: [interviewbuddy1, interviewbuddy2, interviewbuddy3, interviewbuddy4, interviewbuddy5, interviewbuddy6, interviewbuddy9],
+    role: "Solo Developer",
+    duration: "4 weeks",
+    outcome: "Live interview practice product with feedback and progress metrics.",
+    process: ["Problem discovery", "UI design", "Implementation", "Data tracking"],
+    problem: "Practicing alone lacks realistic time pressure, consistency, and measurable improvement.",
+    userQuotes: [
+      "No pressure, no progress—mock interviews need structure.",
+      "I want to see analytics so I can target weak spots."
+    ],
+    solution: "Four-step workflow: start mock, timed session, feedback notes, and streak tracking.",
+    features: [
+      { title: "Start Mock", lowfi: "Random coding question generator with preparation timer" },
+      { title: "Timed Session", lowfi: "45-minute countdown and progress checkpoints" },
+      { title: "Get Feedback", lowfi: "Self-rating form and improvement notes" },
+      { title: "Track Streak", lowfi: "Consistency dashboard and achievement badges" }
+    ],
+    summary: "Designed to help developers simulate real interviews and measure growth with analytics.",
+    ranking: 2,
   },
   {
     picture: picOne,
@@ -335,7 +371,7 @@ const projects: ProjectItem[] = [
     year: "2024",
     type: "Individual Project",
     link: "https://www.figma.com/proto/CbXtLVYtZrnkUQHlwTkVKO/FoodieOrder---Online-Food-Ordering?node-id=59-58&t=3avEhp40FprRYU5c-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=59%3A58",
-    short: "Ordering flow & menu design with reduced friction for users.",
+    short: "Designed a fast food ordering UX with persistent summary and filters, focusing on reducing friction and improving menu discovery.",
     concept: "Persistent order summary and clear dietary filters for quick ordering.",
     tech: ["Figma", "UX"],
     screenshots: [picEight, food1, food2, food3, food4, food5, food6, food7, food8, food9, food10],
@@ -439,7 +475,7 @@ const projects: ProjectItem[] = [
       { title: "Search", lowfi: "Search shipments, milestones, and alerts" }
     ],
     summary: "Prototype dashboard focused on exception prioritization and real-time visibility.",
-    ranking: 2,
+    ranking: 13,
   },
 ];
 

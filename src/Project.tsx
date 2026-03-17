@@ -19,7 +19,7 @@ const Project = () => {
                   <div
                     key={index}
                     className="bg-[#060C26] border-[#485789] border flex flex-col justify-between text-left p-10 gap-[10px] relative"
-                    style={{ width: "650px", height: "600px", margin: "15px" }}
+                    style={{ width: "650px", minHeight: "600px", margin: "15px", overflow: "hidden" }}
                   >
                     {item.ranking && (
                       <div className="absolute top-3 right-3 bg-gradient-to-r from-[#99CEFD] to-[#0F3E68] rounded-full w-12 h-12 flex items-center justify-center">
@@ -50,6 +50,11 @@ const Project = () => {
                           {item.type}
                         </span>
                       </p>
+                      {item.short && (
+                        <p className="text-[#D0DAF8] font-arial text-[16px] mt-2">
+                          {item.short}
+                        </p>
+                      )}
                     </div>
                     <div className="flex justify-center">
                       <button
@@ -69,8 +74,8 @@ const Project = () => {
                 {projects.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-center gap-10 text-left px-[20px] relative"
-                    style={{ width: "312px", height: "450px" }}
+                    className="bg-[#060C26] border-[#485789] border flex flex-col justify-between gap-10 text-left px-[20px] relative"
+                    style={{ width: "312px", minHeight: "500px", marginBottom: "15px", overflow: "hidden" }}
                   >
                     {item.ranking && (
                       <div className="absolute top-2 right-2 bg-gradient-to-r from-[#99CEFD] to-[#0F3E68] rounded-full w-10 h-10 flex items-center justify-center">
@@ -101,6 +106,11 @@ const Project = () => {
                           {item.type}
                         </span>
                       </p>
+                      {item.short && (
+                        <p className="text-[#D0DAF8] font-arial text-[13px] mt-2">
+                          {item.short}
+                        </p>
+                      )}
                     </div>
                     <div className="flex justify-center">
                       <button
