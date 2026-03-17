@@ -8,17 +8,18 @@ import Experience from './Experience';
 import Footer from './Footer';
 
 function App() {
-  
   return (
     <>
       <Navbar />
-      <Title />
-      <Project />
-      <Skill />
-      <Experience />
-      <Footer />
+      <div className="pt-[110px] md:pt-[100px]">
+        <Title />
+        <Project />
+        <Skill />
+        <Experience />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
 export default App
